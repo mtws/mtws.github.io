@@ -30,7 +30,14 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     }
 
     if (data[field]) {
-      items[field] = data[field]
+
+      // Make date-object work with gray-matter when
+      if (field === 'date' && typeof data[field] !== 'string' ) {
+        const modified = JSON.stringify(data[field])
+        items[field] = JSON.parse(modified);
+      } else {
+        items[field] = data[field]
+      }
     }
   })
 
