@@ -1,7 +1,7 @@
 ---
 title: Testing a new post from prod
 excerpt: This is just the excerpt
-date: 2021-05-30T22:53:42.329Z
+date: 2021-05-31T10:34:38.246Z
 coverImage: /assets/nathan-rogers-i9hyw30buuq-unsplash.jpg
 author:
   name: MT
