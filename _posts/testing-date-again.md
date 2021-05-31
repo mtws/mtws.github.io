@@ -1,6 +1,6 @@
 ---
 title: Testing date again
-excerpt: Does this wok
+excerpt: Does this work?
 date: 2021-05-31T00:26:47.845
 coverImage: /assets/tim.jpeg
 author:
