@@ -7,7 +7,7 @@ excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 date: 2020-03-16T05:35:07.322Z
 coverImage: /assets/blog/dynamic-routing/cover.jpg
 author:
-  name: JJ Kasper
+  name: JJ Kaspers
   picture: /assets/profile_avatar_placeholder_large.png
 ogImage:
   url: /assets/blog/dynamic-routing/cover.jpg
