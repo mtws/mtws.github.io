@@ -1,6 +1,6 @@
 # A statically generated blog example using Next.js, Markdown, and TypeScript
 
-This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
+This is a demo-procjet based on [blog-starter-typescript](https://github.com/vercel/next.js/tree/canary/examples/blog-starter-typescript) plus TypeScript.
 
 This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
 
@@ -8,34 +8,30 @@ The blog posts are stored in `/_posts` as Markdown files with front matter suppo
 
 To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
 
-## How to use
+## Local setup
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog-starter-typescript&project-name=blog-starter-typescript&repository-name=blog-starter-typescript)
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example blog-starter-typescript blog-starter-typescript-app
-# or
-yarn create next-app --example blog-starter-typescript blog-starter-typescript-app
+```
+yarn install
+yarn dev
 ```
 
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+## Deploy 
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Commit your changes and deploy. GitHub actions will run the `npm run export` and commit the content of the `out` directory to the `gh-pages` branch.
 
-# Notes
+## Netflify CMS
 
-This blog-starter-typescript uses [Tailwind CSS](https://tailwindcss.com). To control the generated stylesheet's filesize, this example uses Tailwind CSS' v2.0 [`purge` option](https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css) to remove unused CSS.
+Netflify CMS has been set up the following way:
 
-[Tailwind CSS v2.0 no longer supports Node.js 8 or 10](https://tailwindcss.com/docs/upgrading-to-v2#upgrade-to-node-js-12-13-or-higher). To build your CSS you'll need to ensure you are running Node.js 12.13.0 or higher in both your local and CI environments.
+- A new oauth app was created in GitHub with the Authorization callback URL https://api.netlify.com/auth/done.
+- A new empty GitHub repo was created to use for the Netlify connection (could probably use any repo for this)
+- A new site was created in https://app.netlify.com with the connection to the newly created Git-repo and using the oauth credentials.
+- The custom domain (mtws.fi) is defined for the netlify-site.
+- The netlify-site-name is used in the file `publich/admin/config.yml` of this repo.
 
+More info: https://cnly.github.io/2018/04/14/just-3-steps-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes.html
 
-# TODO:
+## TODO:
 
 - Add static home-page with editable sections (https://www.netlifycms.org/docs/nextjs/)
-- Document how this has been done
+- Add cloudinary image-loader https://nextjs.org/docs/basic-features/image-optimization#loader, 
