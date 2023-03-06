@@ -24,8 +24,6 @@ h1 {
 
 .nav-links {
     width: 100%;
-    top: 5rem;
-    left: 48px;
     background-color: #ff9776;
     display: none;
     margin: 0;
@@ -50,8 +48,9 @@ h1 {
 }
 
 .hamburger {
-    padding-right: 20px;
-    cursor: pointer;
+    display: inline-block; 
+    background: 0;
+    border: 0;
 }  
 
 .hamburger .line {
@@ -64,9 +63,7 @@ h1 {
 
 @media screen and (min-width: 636px) {
     .nav-links {
-        margin-left: 5em;
         display: block;
-        position: static;
         width: auto;
         background: none;
     }
@@ -88,4 +85,14 @@ html.dark {
 
 .dark .nav-links a {
     color: #fff;
+}
+
+.sr-only {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
 }
