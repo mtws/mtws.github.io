@@ -7,7 +7,8 @@ image: /assets/hedgehog.jpg
 author: Mats
 tags:
   - testtag
+  - anothertagtest
 ---
 H﻿ello! This is the body.
 
-A﻿ nnew paragraph.
+A﻿ new paragraph with some **bolded text** and [a link to astro](https://astro.build).
